@@ -22,12 +22,12 @@ df_converters = {"PostCreationDate": dateutil.parser.parse,
 
 def get_reader(file_name="train-sample.csv"):
     reader = csv.reader(open(os.path.join(data_path, file_name)))
-    header = reader.next()
+    header = next(reader)
     return reader
 
 def get_header(file_name="train-sample.csv"):
     reader = csv.reader(open(os.path.join(data_path, file_name)))
-    header = reader.next()
+    header = next(reader)
     return header
 
 def get_closed_count(file_name):

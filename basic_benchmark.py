@@ -23,7 +23,7 @@ def main():
     fea = features.extract_features(feature_names, data)
 
     print("Training the model")
-    rf = RandomForestClassifier(n_estimators=50, verbose=2, compute_importances=True, n_jobs=-1)
+    rf = RandomForestClassifier(n_estimators=50, verbose=2, n_jobs=-1)
     rf.fit(fea, data["OpenStatus"])
 
     print("Reading test file and making predictions")
