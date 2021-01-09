@@ -6,8 +6,8 @@ import numpy as np
 import os
 import pandas as pd
 
-data_path = None
-submissions_path = None
+data_path = "/kaggle/input/predict-closed-questions-on-stack-overflow"
+submissions_path = "/root/Stack-Overflow-Competition"
 if not data_path or not submissions_path:
     raise Exception("Set the data and submission paths in competition_utilities.py!")
 
